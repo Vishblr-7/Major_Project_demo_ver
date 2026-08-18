@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #0b1220;
+  color: #e6edf7;
+}
+
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f2f6fc;
+  margin: 0;
+}
+
+.page-subtitle {
+  color: #8a99b8;
+  margin: 4px 0 20px 0;
+  font-size: 13px;
+}
+
+.section-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #f2f6fc;
+  margin: 0 0 12px 0;
+}
+
+.metric-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: #f2f6fc;
+  line-height: 1.2;
+}
+
+.metric-label {
+  color: #8a99b8;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.metric-sub {
+  color: #5c6b8a;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.data-source-tag {
+  font-size: 11px;
+  color: #5c6b8a;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2b45;
+  border-radius: 4px;
+}

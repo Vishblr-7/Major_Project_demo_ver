@@ -1,0 +1,45 @@
+# Module 0/1/2 baseline checksums (SHA-256)
+#
+# Updated 2026-08-18 as part of the Module 2 (emission intelligence) pass. See
+# docs/MODULE2_COPERT_METHODOLOGY.md and docs/MODULE1_VERIFICATION.md for the
+# full investigation behind every change below -- nothing here changed silently.
+#
+# outputs/module1_indra_batch/INDRA_COPERT_DATASET.csv and module1_manifest.csv
+# are UNCHANGED from the original 2026-08-17 baseline (Module 1's frozen batch
+# output was never touched or regenerated in this pass) -- both checksums below
+# are identical to the very first version of this file.
+2aaeebb939a4957e710e81de8b81dd3ead616727b04d042a0816eb48b2318ed4  outputs/module1_indra_batch/INDRA_COPERT_DATASET.csv
+4ce4ed50822f9afd95aefe778305e08eedcd4973627e459908cc51d6de64f76b  outputs/module1_indra_batch/module1_manifest.csv
+#
+# outputs/module1_distance_enriched/INDRA_COPERT_DATASET_WITH_DISTANCE.csv and
+# outputs/module2_copert_scenario_distance/INDRA_COPERT_INPUT.csv CHANGED from
+# the original baseline, for two fully-expected, already-classified reasons
+# (see docs/MODULE1_VERIFICATION.md section 7 and docs/MODULE0_VERIFICATION.md):
+#   1. Regenerated from outputs/module1_final_batch/ (the hardened, Task
+#      B/C/D-verified Module 1 rerun) rather than outputs/module1_indra_batch/,
+#      per this Module 2 prompt's explicit instruction -- its wall-clock
+#      `timestamp` column differs from the original batch's by construction
+#      (each run stamps real processing time), same as every prior batch rerun.
+#   2. outputs/module1_final_batch/'s trajectory CSVs legitimately carry one
+#      additional documented column (`vehicle_total_distance_km`, part of
+#      MODULE1_CONTRACT.md's trajectory-CSV schema) that the original frozen
+#      trajectory CSVs predate -- so INDRA_COPERT_DATASET_WITH_DISTANCE.csv now
+#      has 17 columns instead of 16. Row counts (61,707 and 53,044
+#      respectively) and every other column's values are unchanged.
+7c85f5c723700025dab83277de37f5c6f089926b39a72b80bd1bf074daebaf39  outputs/module1_distance_enriched/INDRA_COPERT_DATASET_WITH_DISTANCE.csv  # PRIOR (pre-Module-2) value, kept for reference
+8b428e5d12cda0525cb6d73989cd223fa7d1641739c5a8e826a08b79cb7bd14a  outputs/module1_distance_enriched/INDRA_COPERT_DATASET_WITH_DISTANCE.csv  # CURRENT authoritative value
+e58c57a1d73893b99a1df477a379f00d2e9df5baab8b8e30283f29365da09bc4  outputs/module2_copert_scenario_distance/INDRA_COPERT_INPUT.csv  # PRIOR (pre-Module-2) value, kept for reference
+bde5a8a24ab14b3f6f001c5f952cfe2d3860096a4ba785d8b7d30b8ff4048264  outputs/module2_copert_scenario_distance/INDRA_COPERT_INPUT.csv  # CURRENT authoritative value
+#
+# outputs/copert_emissions/vehicle_emissions.csv CHANGED, for a real and
+# expected reason: Module 2 Task A resolved docs/KNOWN_ISSUES.md section 1 by
+# implementing a real COPERT factor-table parser (previously every record used
+# FALLBACK_SCENARIO_FACTOR; now every record's four `*_source` columns read
+# COPERT_FACTOR_TABLE instead). The parsed factor values are bit-for-bit
+# identical to FALLBACK_FACTORS (see docs/MODULE2_COPERT_METHODOLOGY.md), so
+# every numeric emission column (CO2_g, NOx_g, CO_g, PM25_g, and all four
+# *_EF_g_per_km columns) is byte-identical to before -- only the *_source
+# columns' text changed, which is what actually moves this checksum. Row count
+# (1,075 included / 127 excluded) is unchanged.
+4dfb497ca45c2ebd9e33843285e0a9c412506c01829c5d0619115b6e34b4590c  outputs/copert_emissions/vehicle_emissions.csv  # PRIOR (pre-Module-2) value, kept for reference
+8c25fe18a45dfd592b6c716d2187cab060f9f764fa0a44448cecc34fc4db262d  outputs/copert_emissions/vehicle_emissions.csv  # CURRENT authoritative value

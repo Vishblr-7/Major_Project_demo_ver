@@ -1,0 +1,29 @@
+# Python virtual environment -- platform-specific, reinstall via requirements.txt
+venv/
+__pycache__/
+*.pyc
+
+# Node dependencies / build output -- reinstall via `npm install` in frontend/
+frontend/node_modules/
+frontend/dist/
+
+# OS junk
+.DS_Store
+
+# Leftover git internals from an earlier cleanup session (see docs/CLEANUP_LOG.md)
+_git_history_backup/
+
+# Explicitly marked scratch/trash from an earlier cleanup pass
+_TO_DELETE_review_then_trash/
+outputs/_TO_DELETE_review_then_trash/
+
+# Regenerated automatically by the backend on startup (ffmpeg transcode cache)
+backend/media_cache/
+
+# Code only, per request -- large generated/data artifacts stay local, not in git.
+# Regenerate outputs/ by running the module1/module2 pipelines documented in docs/.
+datasets/
+outputs/
+INDRA_data_for_emissions/
+videos/
+models/

@@ -1,0 +1,29 @@
+,,,,Total Total
+Passenger Cars,Petrol,Mini,Euro 6 a/b/c,135.5194
+,,Small,Euro 6 a/b/c,168.372
+,,Medium,Euro 6 a/b/c,194.4926
+,Petrol Total,,,149.1856
+,Petrol Hybrid,Medium,Euro 6 a/b/c,0
+,Diesel,Mini,Euro 6 a/b/c,0
+,,Small,Euro 6 a/b/c,164.3489
+,,Medium,Euro 6 a/b/c,176.2566
+,Diesel Total,,,170.3027
+,LPG Bifuel,Mini,Euro 6 a/b/c,0
+,,Small,Euro 6 a/b/c,0
+,LPG Bifuel Total,,,0
+,CNG Bifuel,Small,Euro 6 a/b/c,0
+,,Medium,Euro 6 a/b/c,0
+,CNG Bifuel Total,,,0
+Passenger Cars Total,,,,151.7609
+Heavy Duty Trucks,Diesel,Rigid >32 t,Euro VI D/E,"1,123.5121"
+,CNG,Rigid >12 t,Euro VI D/E,695.3415
+Heavy Duty Trucks Total,,,,909.4268
+Buses,Diesel,Urban Buses Standard 15 - 18 t,Euro VI A/B/C,924.2413
+,CNG,Urban CNG Buses <=15 t,Euro VI D/E,564.1916
+,,Urban CNG Buses 15 - 18 t,Euro VI D/E,884.8507
+,CNG Total,,,671.078
+Buses Total,,,,855.1967
+L-Category,Petrol,Motorcycles 4-stroke <250 cm³,Euro 5,68.6869
+,,Motorcycles 4-stroke 250 - 750 cm³,Euro 5,96.1136
+,,Quad & ATVs,Euro 5,175.1251
+,Petrol Total,,,73.1875

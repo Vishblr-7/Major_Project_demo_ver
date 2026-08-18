@@ -1,0 +1,84 @@
+# Major_P_HyBrid — consolidated project configuration.
+# Camera calibration constants (ROI points, homography, resolution profiles)
+# stay in module1_traffic/config.py by design (Module 0 instruction: do not
+# move or change any calibration value). This file holds paths and constants
+# that were previously scattered across script argparse defaults, so later
+# modules have exactly one place to look.
+
+paths:
+  model_path: models/best.pt
+  video_sources:
+    indra_videos: INDRA_data_for_emissions/videos_mp4
+    sample_videos: videos
+  outputs_root: outputs
+  module1_outputs: outputs/module1_indra_batch
+  module1_distance_enriched: outputs/module1_distance_enriched
+  module2_scenario_dataset: outputs/module2_copert_scenario_distance
+  module2_emissions_output: outputs/copert_emissions
+  copert_factor_dir: module2_emission/factors
+  module2_master_dataset: module2_emission/data/master/module2_master.csv
+
+vehicle_classes:
+  # YOLO class id -> class name (must match models/best.pt's training labels).
+  0: car
+  1: motorcycle
+  2: bus
+  3: truck
+  4: autorickshaw
+  5: bicycle
+
+yolo_to_copert_category:
+  # vehicle_type (lowercase) -> COPERT scenario category.
+  # bicycle is intentionally absent: zero tailpipe emissions, never mapped.
+  car: PASSENGER_CAR
+  motorcycle: MOTORCYCLE
+  autorickshaw: THREE_WHEELER
+  bus: BUS
+  truck: HEAVY_DUTY_TRUCK
+
+copert_factor_category_labels:
+  # COPERT scenario category -> the label used inside the COPERT_2025_*.csv
+  # factor tables' "category" column.
+  PASSENGER_CAR: Passenger Cars
+  MOTORCYCLE: L-Category
+  BUS: Buses
+  HEAVY_DUTY_TRUCK: Heavy Duty Trucks
+  # THREE_WHEELER has no approved COPERT factor mapping yet (see
+  # docs/MODULE1_CONTRACT.md); autorickshaw tracks are counted but excluded
+  # from quantitative COPERT emissions until one is defined.
+
+copert_fuel_mix_assumption:
+  # Which pivot-table row (column-1 fuel/technology label in the raw
+  # COPERT_2025_*.csv exports) represents each category's g/km factor.
+  # "Petrol Total" for light-duty categories, the single "Diesel" leaf row
+  # for heavy-duty categories -- a fixed, documented assumption that the
+  # Indian urban fleet these INDRA videos were shot in is predominantly
+  # petrol-fuelled for cars/motorcycles and predominantly diesel-fuelled for
+  # trucks/buses. Applied by module2_emission/copert/copert_emission_engine.py;
+  # see docs/MODULE2_COPERT_METHODOLOGY.md for the full derivation, including
+  # confirmation that this rule reproduces every FALLBACK_FACTORS value
+  # bit-for-bit from the raw tables.
+  Passenger Cars: "Petrol Total"
+  L-Category: "Petrol Total"
+  Heavy Duty Trucks: "Diesel"
+  Buses: "Diesel"
+
+# A parsed factor-table value further than this multiple from the
+# corresponding FALLBACK_FACTORS constant (either direction) is rejected as a
+# likely row-selection or unit error, and the fallback constant is used
+# instead -- the same kind of check that would have caught the PM2.5 ~338x
+# bug (docs/KNOWN_ISSUES.md) on its very first record.
+copert_factor_sanity_check_max_ratio: 3.0
+
+emission_quality_thresholds:
+  min_track_length: 10
+  max_reasonable_speed_kmph: 80.0
+  max_reasonable_accel_mps2: 5.0
+  speed_smoothing_alpha: 0.30
+  moving_speed_threshold_kmph: 1.0
+
+pollutants:
+  - CO2
+  - NOx
+  - CO
+  - PM25

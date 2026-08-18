@@ -1,0 +1,562 @@
+{
+  "split": {
+    "train_videos": [
+      "video1",
+      "video10",
+      "video100",
+      "video101",
+      "video102",
+      "video103",
+      "video11",
+      "video13",
+      "video14",
+      "video19",
+      "video2",
+      "video20",
+      "video21",
+      "video23",
+      "video24",
+      "video26",
+      "video27",
+      "video28",
+      "video29",
+      "video3",
+      "video30",
+      "video31",
+      "video33",
+      "video34",
+      "video35",
+      "video39",
+      "video4",
+      "video40",
+      "video41",
+      "video43",
+      "video44",
+      "video46",
+      "video47",
+      "video49",
+      "video50",
+      "video51",
+      "video52",
+      "video55",
+      "video56",
+      "video57",
+      "video59",
+      "video6",
+      "video60",
+      "video61",
+      "video62",
+      "video67",
+      "video68",
+      "video69",
+      "video7",
+      "video70",
+      "video71",
+      "video73",
+      "video74",
+      "video76",
+      "video77",
+      "video78",
+      "video79",
+      "video8",
+      "video80",
+      "video81",
+      "video83",
+      "video84",
+      "video86",
+      "video87",
+      "video89",
+      "video90",
+      "video91",
+      "video92",
+      "video94",
+      "video95",
+      "video96",
+      "video97",
+      "video99"
+    ],
+    "val_videos": [
+      "video104",
+      "video15",
+      "video32",
+      "video36",
+      "video42",
+      "video45",
+      "video5",
+      "video54",
+      "video58",
+      "video66",
+      "video72",
+      "video82",
+      "video85",
+      "video88",
+      "video9",
+      "video98"
+    ],
+    "test_videos": [
+      "video12",
+      "video16",
+      "video17",
+      "video18",
+      "video22",
+      "video25",
+      "video37",
+      "video38",
+      "video48",
+      "video53",
+      "video63",
+      "video64",
+      "video65",
+      "video75",
+      "video93"
+    ]
+  },
+  "pollutants": {
+    "CO2": {
+      "best_params": {
+        "n_estimators": 400,
+        "max_depth": 3,
+        "learning_rate": 0.02,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "reg_lambda": 2.0
+      },
+      "cv_train_val": {
+        "r2_mean": 0.7023929227313391,
+        "r2_std": 0.138525294121183,
+        "mae_mean": 0.24387124945101551,
+        "rmse_mean": 0.46700705585354213
+      },
+      "grid_search": [
+        {
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 3,
+            "learning_rate": 0.05,
+            "subsample": 0.8,
+            "colsample_bytree": 0.8,
+            "reg_lambda": 1.0
+          },
+          "cv": {
+            "r2_mean": 0.6931039778831365,
+            "r2_std": 0.14244046090687312,
+            "mae_mean": 0.23922699209906914,
+            "rmse_mean": 0.47031815457620424
+          }
+        },
+        {
+          "params": {
+            "n_estimators": 300,
+            "max_depth": 4,
+            "learning_rate": 0.03,
+            "subsample": 0.8,
+            "colsample_bytree": 0.8,
+            "reg_lambda": 1.0
+          },
+          "cv": {
+            "r2_mean": 0.6846134810688049,
+            "r2_std": 0.14620809032616355,
+            "mae_mean": 0.23720187787815564,
+            "rmse_mean": 0.47607845337587956
+          }
+        },
+        {
+          "params": {
+            "n_estimators": 150,
+            "max_depth": 2,
+            "learning_rate": 0.1,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0,
+            "reg_lambda": 0.1
+          },
+          "cv": {
+            "r2_mean": 0.5525073824610123,
+            "r2_std": 0.3187748099452563,
+            "mae_mean": 0.252865326334926,
+            "rmse_mean": 0.5409059885170594
+          }
+        },
+        {
+          "params": {
+            "n_estimators": 400,
+            "max_depth": 3,
+            "learning_rate": 0.02,
+            "subsample": 0.7,
+            "colsample_bytree": 0.7,
+            "reg_lambda": 2.0
+          },
+          "cv": {
+            "r2_mean": 0.7023929227313391,
+            "r2_std": 0.138525294121183,
+            "mae_mean": 0.24387124945101551,
+            "rmse_mean": 0.46700705585354213
+          }
+        },
+        {
+          "params": {
+            "n_estimators": 100,
+            "max_depth": 2,
+            "learning_rate": 0.1,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0,
+            "reg_lambda": 5.0
+          },
+          "cv": {
+            "r2_mean": 0.632045048788884,
+            "r2_std": 0.17637971973767524,
+            "mae_mean": 0.2583829899949592,
+            "rmse_mean": 0.5174260881788929
+          }
+        }
+      ],
+      "test": {
+        "r2": 0.8734842298288052,
+        "mae": 0.18495133778625414,
+        "rmse": 0.2478890195191011,
+        "n_test_windows": 196
+      }
+    },
+    "NOx": {
+      "best_params": {
+        "n_estimators": 100,
+        "max_depth": 2,
+        "learning_rate": 0.1,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "reg_lambda": 5.0
+      },
+      "cv_train_val": {
+        "r2_mean": -0.37022241101010117,
+        "r2_std": 0.918588841843284,
+        "mae_mean": 0.00017328256408610557,
+        "rmse_mean": 0.00048352768295721875
+      },
+      "grid_search": [
+        {
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 3,
+            "learning_rate": 0.05,
+            "subsample": 0.8,
+            "colsample_bytree": 0.8,
+            "reg_lambda": 1.0
+          },
+          "cv": {
+            "r2_mean": -0.6610349278758487,
+            "r2_std": 1.8701079407226355,
+            "mae_mean": 0.00017622127595735978,
+            "rmse_mean": 0.0005059271832574238
+          }
+        },
+        {
+          "params": {
+            "n_estimators": 300,
+            "max_depth": 4,
+            "learning_rate": 0.03,
+            "subsample": 0.8,
+            "colsample_bytree": 0.8,
+            "reg_lambda": 1.0
+          },
+          "cv": {
+            "r2_mean": -0.6204745008271549,
+            "r2_std": 1.824158932992617,
+            "mae_mean": 0.00017459235132503067,
+            "rmse_mean": 0.0005002065391421548
+          }
+        },
+        {
+          "params": {
+            "n_estimators": 150,
+            "max_depth": 2,
+            "learning_rate": 0.1,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0,
+            "reg_lambda": 0.1
+          },
+          "cv": {
+            "r2_mean": -1.1362543008447468,
+            "r2_std": 2.235796493060479,
+            "mae_mean": 0.00018981627872852652,
+            "rmse_mean": 0.0005498008401280723
+          }
+        },
+        {
+          "params": {
+            "n_estimators": 400,
+            "max_depth": 3,
+            "learning_rate": 0.02,
+            "subsample": 0.7,
+            "colsample_bytree": 0.7,
+            "reg_lambda": 2.0
+          },
+          "cv": {
+            "r2_mean": -0.3980365522245858,
+            "r2_std": 1.3409221980644077,
+            "mae_mean": 0.00017219899653500722,
+            "rmse_mean": 0.00048420397659349834
+          }
+        },
+        {
+          "params": {
+            "n_estimators": 100,
+            "max_depth": 2,
+            "learning_rate": 0.1,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0,
+            "reg_lambda": 5.0
+          },
+          "cv": {
+            "r2_mean": -0.37022241101010117,
+            "r2_std": 0.918588841843284,
+            "mae_mean": 0.00017328256408610557,
+            "rmse_mean": 0.00048352768295721875
+          }
+        }
+      ],
+      "test": {
+        "r2": 0.6956591428295128,
+        "mae": 0.00010345677554329291,
+        "rmse": 0.00013387016023747522,
+        "n_test_windows": 196
+      }
+    },
+    "CO": {
+      "best_params": {
+        "n_estimators": 300,
+        "max_depth": 4,
+        "learning_rate": 0.03,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0
+      },
+      "cv_train_val": {
+        "r2_mean": 0.8315269376225094,
+        "r2_std": 0.034378683231078136,
+        "mae_mean": 0.0005956798311808114,
+        "rmse_mean": 0.0008786418236042262
+      },
+      "grid_search": [
+        {
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 3,
+            "learning_rate": 0.05,
+            "subsample": 0.8,
+            "colsample_bytree": 0.8,
+            "reg_lambda": 1.0
+          },
+          "cv": {
+            "r2_mean": 0.8281610950908884,
+            "r2_std": 0.037481077635251284,
+            "mae_mean": 0.0006050721956169571,
+            "rmse_mean": 0.00088482313748065
+          }
+        },
+        {
+          "params": {
+            "n_estimators": 300,
+            "max_depth": 4,
+            "learning_rate": 0.03,
+            "subsample": 0.8,
+            "colsample_bytree": 0.8,
+            "reg_lambda": 1.0
+          },
+          "cv": {
+            "r2_mean": 0.8315269376225094,
+            "r2_std": 0.034378683231078136,
+            "mae_mean": 0.0005956798311808114,
+            "rmse_mean": 0.0008786418236042262
+          }
+        },
+        {
+          "params": {
+            "n_estimators": 150,
+            "max_depth": 2,
+            "learning_rate": 0.1,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0,
+            "reg_lambda": 0.1
+          },
+          "cv": {
+            "r2_mean": 0.8009841215231717,
+            "r2_std": 0.05903177199288562,
+            "mae_mean": 0.0006393745438390166,
+            "rmse_mean": 0.0009458735587442515
+          }
+        },
+        {
+          "params": {
+            "n_estimators": 400,
+            "max_depth": 3,
+            "learning_rate": 0.02,
+            "subsample": 0.7,
+            "colsample_bytree": 0.7,
+            "reg_lambda": 2.0
+          },
+          "cv": {
+            "r2_mean": 0.8203559538845809,
+            "r2_std": 0.03831121178231754,
+            "mae_mean": 0.0006160926600513802,
+            "rmse_mean": 0.0009077227401280112
+          }
+        },
+        {
+          "params": {
+            "n_estimators": 100,
+            "max_depth": 2,
+            "learning_rate": 0.1,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0,
+            "reg_lambda": 5.0
+          },
+          "cv": {
+            "r2_mean": 0.797819627714059,
+            "r2_std": 0.047965188868778895,
+            "mae_mean": 0.0006610644931357649,
+            "rmse_mean": 0.0009614315279299568
+          }
+        }
+      ],
+      "test": {
+        "r2": 0.8882182963042251,
+        "mae": 0.0005902971670816664,
+        "rmse": 0.0007996208915518764,
+        "n_test_windows": 196
+      }
+    },
+    "PM25": {
+      "best_params": {
+        "n_estimators": 150,
+        "max_depth": 2,
+        "learning_rate": 0.1,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "reg_lambda": 0.1
+      },
+      "cv_train_val": {
+        "r2_mean": 0.29177127142735726,
+        "r2_std": 0.05855120943431113,
+        "mae_mean": 4.1388007486689644e-05,
+        "rmse_mean": 6.186867657042842e-05
+      },
+      "grid_search": [
+        {
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 3,
+            "learning_rate": 0.05,
+            "subsample": 0.8,
+            "colsample_bytree": 0.8,
+            "reg_lambda": 1.0
+          },
+          "cv": {
+            "r2_mean": 0.2558436619137113,
+            "r2_std": 0.060980015040146274,
+            "mae_mean": 4.252877781345131e-05,
+            "rmse_mean": 6.340799353956082e-05
+          }
+        },
+        {
+          "params": {
+            "n_estimators": 300,
+            "max_depth": 4,
+            "learning_rate": 0.03,
+            "subsample": 0.8,
+            "colsample_bytree": 0.8,
+            "reg_lambda": 1.0
+          },
+          "cv": {
+            "r2_mean": 0.25437059126617256,
+            "r2_std": 0.05396760476347757,
+            "mae_mean": 4.260638805951136e-05,
+            "rmse_mean": 6.344249569762748e-05
+          }
+        },
+        {
+          "params": {
+            "n_estimators": 150,
+            "max_depth": 2,
+            "learning_rate": 0.1,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0,
+            "reg_lambda": 0.1
+          },
+          "cv": {
+            "r2_mean": 0.29177127142735726,
+            "r2_std": 0.05855120943431113,
+            "mae_mean": 4.1388007486689644e-05,
+            "rmse_mean": 6.186867657042842e-05
+          }
+        },
+        {
+          "params": {
+            "n_estimators": 400,
+            "max_depth": 3,
+            "learning_rate": 0.02,
+            "subsample": 0.7,
+            "colsample_bytree": 0.7,
+            "reg_lambda": 2.0
+          },
+          "cv": {
+            "r2_mean": 0.23041171662643106,
+            "r2_std": 0.050755440532534495,
+            "mae_mean": 4.354292107903127e-05,
+            "rmse_mean": 6.444206384592679e-05
+          }
+        },
+        {
+          "params": {
+            "n_estimators": 100,
+            "max_depth": 2,
+            "learning_rate": 0.1,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0,
+            "reg_lambda": 5.0
+          },
+          "cv": {
+            "r2_mean": 0.2866732662790613,
+            "r2_std": 0.0577885604100736,
+            "mae_mean": 4.1388300542384285e-05,
+            "rmse_mean": 6.20702476810387e-05
+          }
+        }
+      ],
+      "test": {
+        "r2": 0.41046609018463576,
+        "mae": 3.7916571197714325e-05,
+        "rmse": 5.292027818442696e-05,
+        "n_test_windows": 196
+      }
+    }
+  },
+  "features": [
+    "car_count",
+    "motorcycle_count",
+    "bus_count",
+    "truck_count",
+    "autorickshaw_count",
+    "bicycle_count",
+    "total_vehicles",
+    "current_vehicles",
+    "average_speed_kmph",
+    "speed_std",
+    "density_veh_per_100m2",
+    "mean_acceleration",
+    "acceleration_std",
+    "stopped_vehicle_ratio",
+    "car_distance_km",
+    "motorcycle_distance_km",
+    "bus_distance_km",
+    "truck_distance_km",
+    "autorickshaw_distance_km",
+    "bicycle_distance_km",
+    "total_distance_km_in_window",
+    "car_ratio",
+    "motorcycle_ratio",
+    "bus_ratio",
+    "truck_ratio",
+    "window_position_frac",
+    "prev_total_vehicles",
+    "delta_total_vehicles"
+  ]
+}

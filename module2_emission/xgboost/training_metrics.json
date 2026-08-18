@@ -1,0 +1,427 @@
+{
+  "n_splits": 5,
+  "metrics": {
+    "CO2": [
+      {
+        "fold": 0,
+        "test_videos": [
+          "video10",
+          "video17",
+          "video18",
+          "video21",
+          "video29",
+          "video9"
+        ],
+        "n_test_windows": 80,
+        "mae": 0.700609598487266,
+        "rmse": 1.0265312466691199,
+        "r2": 0.18388805281581522
+      },
+      {
+        "fold": 1,
+        "test_videos": [
+          "video11",
+          "video12",
+          "video2",
+          "video23",
+          "video31",
+          "video5"
+        ],
+        "n_test_windows": 78,
+        "mae": 0.5492372744929538,
+        "rmse": 0.7806122950261468,
+        "r2": 0.17098869681865236
+      },
+      {
+        "fold": 2,
+        "test_videos": [
+          "video19",
+          "video24",
+          "video26",
+          "video28",
+          "video30",
+          "video8"
+        ],
+        "n_test_windows": 76,
+        "mae": 0.6948239297366371,
+        "rmse": 0.9722788264215896,
+        "r2": 0.21464894890244146
+      },
+      {
+        "fold": 3,
+        "test_videos": [
+          "video13",
+          "video15",
+          "video20",
+          "video27",
+          "video3",
+          "video4"
+        ],
+        "n_test_windows": 76,
+        "mae": 0.6519681433748792,
+        "rmse": 1.0449736349455663,
+        "r2": 0.32461497037005227
+      },
+      {
+        "fold": 4,
+        "test_videos": [
+          "video14",
+          "video16",
+          "video22",
+          "video25",
+          "video6",
+          "video7"
+        ],
+        "n_test_windows": 76,
+        "mae": 0.702876280995258,
+        "rmse": 0.9677243592502167,
+        "r2": 0.24495633075362877
+      }
+    ],
+    "CO2_overall": {
+      "mae": 0.6597514772060791,
+      "rmse": 0.9628310150083789,
+      "r2": 0.27100021528228746
+    },
+    "NOx": [
+      {
+        "fold": 0,
+        "test_videos": [
+          "video10",
+          "video17",
+          "video18",
+          "video21",
+          "video29",
+          "video9"
+        ],
+        "n_test_windows": 80,
+        "mae": 0.00027657951407286804,
+        "rmse": 0.0004676560360472096,
+        "r2": 0.08760772561492824
+      },
+      {
+        "fold": 1,
+        "test_videos": [
+          "video11",
+          "video12",
+          "video2",
+          "video23",
+          "video31",
+          "video5"
+        ],
+        "n_test_windows": 78,
+        "mae": 0.00025431347546845794,
+        "rmse": 0.00037979040945463027,
+        "r2": -1.4251169928133587
+      },
+      {
+        "fold": 2,
+        "test_videos": [
+          "video19",
+          "video24",
+          "video26",
+          "video28",
+          "video30",
+          "video8"
+        ],
+        "n_test_windows": 76,
+        "mae": 0.00020408308980885908,
+        "rmse": 0.0002807159637168259,
+        "r2": 0.20376392520141406
+      },
+      {
+        "fold": 3,
+        "test_videos": [
+          "video13",
+          "video15",
+          "video20",
+          "video27",
+          "video3",
+          "video4"
+        ],
+        "n_test_windows": 76,
+        "mae": 0.00031982651682889717,
+        "rmse": 0.0005972223679486533,
+        "r2": 0.2642894253534356
+      },
+      {
+        "fold": 4,
+        "test_videos": [
+          "video14",
+          "video16",
+          "video22",
+          "video25",
+          "video6",
+          "video7"
+        ],
+        "n_test_windows": 76,
+        "mae": 0.0002905515181479226,
+        "rmse": 0.00037620455235603693,
+        "r2": 0.5786572354294373
+      }
+    ],
+    "NOx_overall": {
+      "mae": 0.00026907217019710037,
+      "rmse": 0.00043368346061437675,
+      "r2": 0.25345696980627885
+    },
+    "CO": [
+      {
+        "fold": 0,
+        "test_videos": [
+          "video10",
+          "video17",
+          "video18",
+          "video21",
+          "video29",
+          "video9"
+        ],
+        "n_test_windows": 80,
+        "mae": 0.0014663424756763447,
+        "rmse": 0.001897054570373999,
+        "r2": 0.4251613477102101
+      },
+      {
+        "fold": 1,
+        "test_videos": [
+          "video11",
+          "video12",
+          "video2",
+          "video23",
+          "video31",
+          "video5"
+        ],
+        "n_test_windows": 78,
+        "mae": 0.0011511858828384051,
+        "rmse": 0.001585011377512874,
+        "r2": -0.11151463818888208
+      },
+      {
+        "fold": 2,
+        "test_videos": [
+          "video19",
+          "video24",
+          "video26",
+          "video28",
+          "video30",
+          "video8"
+        ],
+        "n_test_windows": 76,
+        "mae": 0.0015976321319226992,
+        "rmse": 0.001958387709911253,
+        "r2": 0.17364230670951197
+      },
+      {
+        "fold": 3,
+        "test_videos": [
+          "video13",
+          "video15",
+          "video20",
+          "video27",
+          "video3",
+          "video4"
+        ],
+        "n_test_windows": 76,
+        "mae": 0.0015619304682973456,
+        "rmse": 0.0019441944898453526,
+        "r2": 0.09205214561574038
+      },
+      {
+        "fold": 4,
+        "test_videos": [
+          "video14",
+          "video16",
+          "video22",
+          "video25",
+          "video6",
+          "video7"
+        ],
+        "n_test_windows": 76,
+        "mae": 0.0018632976697766299,
+        "rmse": 0.0023535593370502153,
+        "r2": 0.4091814115741108
+      }
+    ],
+    "CO_overall": {
+      "mae": 0.0015254851747027213,
+      "rmse": 0.001960488781359404,
+      "r2": 0.3695136900859338
+    },
+    "PM25": [
+      {
+        "fold": 0,
+        "test_videos": [
+          "video10",
+          "video17",
+          "video18",
+          "video21",
+          "video29",
+          "video9"
+        ],
+        "n_test_windows": 80,
+        "mae": 7.632616942075724e-05,
+        "rmse": 9.519106909267129e-05,
+        "r2": -0.019559093743499067
+      },
+      {
+        "fold": 1,
+        "test_videos": [
+          "video11",
+          "video12",
+          "video2",
+          "video23",
+          "video31",
+          "video5"
+        ],
+        "n_test_windows": 78,
+        "mae": 5.7334116038614613e-05,
+        "rmse": 6.421839316808167e-05,
+        "r2": -0.2610786042876241
+      },
+      {
+        "fold": 2,
+        "test_videos": [
+          "video19",
+          "video24",
+          "video26",
+          "video28",
+          "video30",
+          "video8"
+        ],
+        "n_test_windows": 76,
+        "mae": 5.4726627177618736e-05,
+        "rmse": 8.083965190304448e-05,
+        "r2": -0.2141624675154945
+      },
+      {
+        "fold": 3,
+        "test_videos": [
+          "video13",
+          "video15",
+          "video20",
+          "video27",
+          "video3",
+          "video4"
+        ],
+        "n_test_windows": 76,
+        "mae": 7.224591734902375e-05,
+        "rmse": 9.130472199407582e-05,
+        "r2": -0.0142231341076553
+      },
+      {
+        "fold": 4,
+        "test_videos": [
+          "video14",
+          "video16",
+          "video22",
+          "video25",
+          "video6",
+          "video7"
+        ],
+        "n_test_windows": 76,
+        "mae": 8.165254312133877e-05,
+        "rmse": 9.253561266028966e-05,
+        "r2": -0.09030278028708594
+      }
+    ],
+    "PM25_overall": {
+      "mae": 6.848098773554168e-05,
+      "rmse": 8.558843650380227e-05,
+      "r2": -0.029795823084085127
+    }
+  },
+  "feature_importance": {
+    "CO2": {
+      "method": "shap_mean_abs",
+      "importance": {
+        "car_count": 0.1225549653172493,
+        "motorcycle_count": 0.07617784291505814,
+        "bus_count": 0.026492927223443985,
+        "truck_count": 0.39183008670806885,
+        "autorickshaw_count": 0.15738268196582794,
+        "bicycle_count": 0.033771708607673645,
+        "total_vehicles": 0.07337222993373871,
+        "current_vehicles": 0.01595548912882805,
+        "average_speed_kmph": 0.29992496967315674,
+        "speed_std": 0.06143834441900253,
+        "density_veh_per_100m2": 0.005778139922767878,
+        "mean_acceleration": 0.062131937593221664,
+        "acceleration_std": 0.10298782587051392,
+        "stopped_vehicle_ratio": 0.14583007991313934
+      }
+    },
+    "NOx": {
+      "method": "shap_mean_abs",
+      "importance": {
+        "car_count": 7.269580237334594e-06,
+        "motorcycle_count": 1.7872487660497427e-05,
+        "bus_count": 7.282166188815609e-05,
+        "truck_count": 0.00010176301293540746,
+        "autorickshaw_count": 1.1764337614295073e-05,
+        "bicycle_count": 1.7188901892950526e-06,
+        "total_vehicles": 2.141449658665806e-05,
+        "current_vehicles": 6.986814696574584e-06,
+        "average_speed_kmph": 7.084666867740452e-05,
+        "speed_std": 1.1385417565179523e-05,
+        "density_veh_per_100m2": 0.0,
+        "mean_acceleration": 3.146747758364654e-06,
+        "acceleration_std": 1.1244746929151006e-05,
+        "stopped_vehicle_ratio": 5.5278993386309594e-05
+      }
+    },
+    "CO": {
+      "method": "shap_mean_abs",
+      "importance": {
+        "car_count": 0.0002446126891300082,
+        "motorcycle_count": 0.0003659806679934263,
+        "bus_count": 5.709697234124178e-06,
+        "truck_count": 7.411003753077239e-05,
+        "autorickshaw_count": 0.00021872982324566692,
+        "bicycle_count": 3.665694748633541e-05,
+        "total_vehicles": 0.0006158893229439855,
+        "current_vehicles": 0.00011099535913672298,
+        "average_speed_kmph": 0.0006595256854780018,
+        "speed_std": 0.0002523186558391899,
+        "density_veh_per_100m2": 2.2606909624300897e-05,
+        "mean_acceleration": 0.00021611640113405883,
+        "acceleration_std": 0.00014416425256058574,
+        "stopped_vehicle_ratio": 0.0003217638877686113
+      }
+    },
+    "PM25": {
+      "method": "shap_mean_abs",
+      "importance": {
+        "car_count": 0.0,
+        "motorcycle_count": 0.0,
+        "bus_count": 0.0,
+        "truck_count": 0.0,
+        "autorickshaw_count": 0.0,
+        "bicycle_count": 0.0,
+        "total_vehicles": 0.0,
+        "current_vehicles": 0.0,
+        "average_speed_kmph": 0.0,
+        "speed_std": 0.0,
+        "density_veh_per_100m2": 0.0,
+        "mean_acceleration": 0.0,
+        "acceleration_std": 0.0,
+        "stopped_vehicle_ratio": 0.0
+      }
+    }
+  },
+  "features": [
+    "car_count",
+    "motorcycle_count",
+    "bus_count",
+    "truck_count",
+    "autorickshaw_count",
+    "bicycle_count",
+    "total_vehicles",
+    "current_vehicles",
+    "average_speed_kmph",
+    "speed_std",
+    "density_veh_per_100m2",
+    "mean_acceleration",
+    "acceleration_std",
+    "stopped_vehicle_ratio"
+  ]
+}

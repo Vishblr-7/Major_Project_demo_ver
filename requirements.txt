@@ -1,0 +1,39 @@
+# Major_P_HyBrid — pinned dependencies.
+# Versions below are suggested, broadly-compatible pins as of the Module 0
+# restructure (2026-08-17). This machine's real interpreter (Anaconda, outside
+# this sandbox) could not be introspected from this session -- before relying
+# on these pins, verify with `pip freeze | grep -iE "ultralytics|opencv|torch"`
+# in your actual environment and adjust if it conflicts with what is already
+# installed and working.
+
+# --- Module 1: perception ---
+ultralytics>=8.3.0
+opencv-python>=4.10.0
+supervision>=0.24.0
+numpy>=1.26.0,<2.0.0
+pandas>=2.2.0
+matplotlib>=3.9.0
+scipy>=1.13.0
+lap>=0.5.12
+pyyaml>=6.0.1
+filterpy>=1.4.5
+
+# --- Module 2: emission intelligence ---
+xgboost>=2.1.0
+scikit-learn>=1.5.0
+joblib>=1.4.0
+shap>=0.46.0
+
+# --- Module 3: navigation + hybrid optimization ---
+requests>=2.32.0
+python-dotenv>=1.0.1
+qiskit>=1.2.0
+qiskit-optimization>=0.6.1
+qiskit-aer>=0.15.0
+
+# --- Module 4: deployment / dashboard / reporting ---
+plotly>=5.24.0
+streamlit>=1.38.0
+
+# --- Testing ---
+pytest>=8.3.0
